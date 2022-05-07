@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>FAMILY BOOK</title>
+    </head>
+    <link rel="stylesheet" href="style.css">
+    <body>
+        <h1 class="text-center"><b>Family Picture Book</b></h1>
+        <hr>
+        <p><i>Hello Everyone..Today I will show you my FAMILY PICTURE BOOK.Hope you like it.</i></p>
+        <br>
+        <img id="FAMILY_picture" src="https://images-na.ssl-images-amazon.com/images/I/81zxBf093zL.jpg" width="400" height="400">
+        <br>
+        <div  id ="FAMILY_name" ,style="font-size: medium; font-family: sans-serif;">
+
+        </div>
+        <br>
+        <button type="button" onclick="update();">NEXT</button>
+    </body>
+<script>
+var Pictures= ["img1.jpg", "img2.jpg", "img3.jpg" ,"img6.jpg"];
+var Names= ["Amrit Narayan", "Rekha Narayan" , "Aakriti Narayan" , "Radhamani Acharaya"];
+var i = 0;
+            function update()
+            {
+                i++;
+                var FAMILY_array = 4
+                if(i > FAMILY_array )
+                {
+                    i = 0;
+                }
+                var updatedImage = Pictures[i];
+                var updatedName  = Names[i];
+                document.getElementById("FAMILY_picture").src = updatedImage;
+                document.getElementById("FAMILY_name").innerHTML = updatedName;
+            }
+</script>    
+</html>
